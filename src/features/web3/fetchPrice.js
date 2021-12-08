@@ -30,7 +30,7 @@ const fetchTokens = async () => {
   const cacheBuster = getApiCacheBuster();
 
   try {
-    const response = await axios.get(`https://api.beefy.finance/prices?_=${cacheBuster}`);
+    const response = await axios.get(`http://localhost:3001/prices?_=${cacheBuster}`);
     return response.data;
   } catch (err) {
     console.error(err);
@@ -42,7 +42,7 @@ const fetchLPs = async () => {
   const cacheBuster = getApiCacheBuster();
 
   try {
-    const response = await axios.get(`https://api.beefy.finance/lps?_=${cacheBuster}`);
+    const response = await axios.get(`http://localhost:3001/lps?_=${cacheBuster}`);
     return response.data;
   } catch (err) {
     console.error(err);
